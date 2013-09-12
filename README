@@ -6,14 +6,20 @@ DESCRIPTION
   OsmAnd is a FOSS offline map viewer for Android:
 
    http://osmand.net/
-  
+
   You can get OsmAnd from F-Droid market and download loads of OSM maps for it.
 
 USAGE
-  Place the Listed_england.obf file in your osmand/ directory (together
-  with other maps) of your mobile device. You should see listed buildings
-  appear as orange circles when you zoom in to level 10 or more. Remember
-  to reload the maps or restart your OsmAnd.
+  1. Place the Listed_england.obf file in your osmand/ directory (together
+  with other maps) of your mobile device.
+
+  2. Reload the maps or restart your OsmAnd app.
+
+  3. Click Menu, Define view, POI..., and "User defined". You can also tick
+  "POI labels" if you want.
+
+  4. You should see listed buildings appear as orange circles when you zoom
+  in to level 10 or more.
 
 RECREATION
   If you want to regenerate the .obf file, follow these steps:
@@ -50,16 +56,16 @@ SOURCES
    http://data.gov.uk/data-requests/list-of-grade-i-and-ii-listed-buildings-in-england
 
   and is licensed under Open Government Licence.
-  
+
   I also used malenki's csv2osm.sh script to learn about the OSM format.
   You can get the original here:
 
    http://malenki.ch/soft/csv2osm.sh
 
 LICENCE
-  The csv2osm.pl script is free software; you can redistribute it and/or 
+  The csv2osm.pl script is free software; you can redistribute it and/or
   modify it under the same terms as Perl itself.
- 
+
   The listed_england.csv was adapted from data that is licensed under
   Open Government Licence.
 
