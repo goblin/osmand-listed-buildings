@@ -1,0 +1,66 @@
+DESCRIPTION
+  This repo contains an .obf map for use with OsmAnd which contains
+  all Grade I and Grade II* listed buildings in England. Handy for people
+  taking part in Wiki Loves Monuments.
+
+  OsmAnd is a FOSS offline map viewer for Android:
+
+   http://osmand.net/
+  
+  You can get OsmAnd from F-Droid market and download loads of OSM maps for it.
+
+USAGE
+  Place the Listed_england.obf file in your osmand/ directory (together
+  with other maps) of your mobile device. You should see listed buildings
+  appear as orange circles when you zoom in to level 10 or more. Remember
+  to reload the maps or restart your OsmAnd.
+
+RECREATION
+  If you want to regenerate the .obf file, follow these steps:
+
+  1. Download the Excel spreadsheet with the list from:
+
+   http://www.owenboswarva.com/opendata/Listed_Buildings_England.zip
+
+  2. Export sheet 1 and sheet 2 (Grade I and Grade II) as CSV with
+     semicolon (;) delimiters
+
+  3. Merge the two CSVs into one file
+
+  4. Run my script:
+
+   $ ./csv2osm.pl < listed_england.csv > listed_england.osm
+
+  5. Get OsmAndMapCreator from:
+
+   http://download.osmand.net/latest-night-build/OsmAndMapCreator-new-dev.zip
+
+  6. Run it and go to Window/Settings. A window named 'Preferences' will
+     appear. Last item in it, "Rendering types (xml config to extract osm
+	 data) file path": enter the path to rendering_types.xml.
+
+  7. Click File/Create .obf from osm file and choose the osm file generated
+     in step 4
+
+  8. The .obf should be created somewhere in ~/osmand/
+
+SOURCES
+  List of buildings comes from:
+
+   http://data.gov.uk/data-requests/list-of-grade-i-and-ii-listed-buildings-in-england
+
+  and is licensed under Open Government Licence.
+  
+  I also used malenki's csv2osm.sh script to learn about the OSM format.
+  You can get the original here:
+
+   http://malenki.ch/soft/csv2osm.sh
+
+LICENCE
+  The csv2osm.pl script is free software; you can redistribute it and/or 
+  modify it under the same terms as Perl itself.
+ 
+  The listed_england.csv was adapted from data that is licensed under
+  Open Government Licence.
+
+  The .obf is derived work and is somewhere between the two licences.
